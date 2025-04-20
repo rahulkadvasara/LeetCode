@@ -50,3 +50,26 @@
 #             if freq == max(d.values()):
 #                 c+=freq
 #         return c
+
+
+# sol 3
+
+# class Solution:
+#     def maxFrequencyElements(self, nums: List[int]) -> int:
+#         dict={}
+#         for i in nums:
+#             if i not in dict.keys():
+#                 dict[i]=1
+#             else:
+#                 dict[i]+=1
+#         maxi=0
+#         for key in dict.keys():
+#             freq=dict[key]
+#             maxi=max(freq,maxi)
+#         count=0
+#         for i in dict.keys():
+#             if dict[i]==maxi:
+#                 count+=dict[i]
+#         return count
+
+        
