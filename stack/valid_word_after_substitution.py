@@ -83,3 +83,14 @@
 #             if not count[0] >= count[1] >= count[2]:
 #                 return False
 #         return count[0] == count[1] == count[2]
+
+
+# sol 5
+
+# class Solution:
+#     def isValid(self, s: str) -> bool:
+#         while s:
+#             if "abc" not in s:
+#                 return False
+#             s = s.replace("abc", "")
+#         return True
