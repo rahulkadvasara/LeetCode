@@ -78,3 +78,33 @@
 #                 else:
 #                     o+=tickets[i]
 #         return o
+
+
+
+# sol 4
+
+# from collections import deque
+
+# class Solution:
+#     def timeRequiredToBuy(self, tickets: List[int], k: int) -> int:
+#         q = deque()
+#         time = 0
+
+#         # Initialize queue with (index, ticket_count)
+#         for i, t in enumerate(tickets):
+#             q.append((i, t))
+
+#         while q:
+#             i, t = q.popleft()
+#             # Simulate 1 ticket being bought
+#             t -= 1
+#             time += 1
+
+#             # If this person still has tickets left, go to the back of the queue
+#             if t > 0:
+#                 q.append((i, t))
+#             # If this is person k and they just finished, break
+#             elif i == k:
+#                 break
+
+#         return time
